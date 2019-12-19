@@ -1,0 +1,12 @@
+[Unit]
+Descrption=Player for sending mqtt commands
+After=syslog.target
+
+[Service]
+Type=Simple
+ExecStart=/usr/bin/fake_player.py
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
